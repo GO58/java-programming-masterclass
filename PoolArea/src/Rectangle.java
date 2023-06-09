@@ -1,21 +1,21 @@
 public class Rectangle {
-    private int length;
-    private int width;
+    private double length;
+    private double width;
 
-    public Rectangle(int width, int length) {
+    public Rectangle(double width, double length) {
         this.length = (length < 0) ? 0 : length;
         this.width = (width < 0) ? 0 : width;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 
-    public int getArea(){
+    public double getArea(){
         return length * width;
     }
 }
