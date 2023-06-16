@@ -23,27 +23,36 @@ public class SmartKitchen {
         iceBox = new Refrigerator();
     }
 
+    public DishWasher getDishWasher() {
+        return dishWasher;
+    }
+
+    public Refrigerator getRefrigerator() {
+        return iceBox;
+    }
+
+    public CoffeeMaker getCoffeeMaker() {
+        return brewMaster;
+    }
+
     public void addWater(){
-        brewMaster.turnOn();
+        
     }    
 
     public void pourMilk(){
-        iceBox.turnOn();
+        
     }
 
     public void loadDishwasher(){
-        dishWasher.turnOn();
+        
     }
 
     public void setKitchenState(boolean coffee, boolean dishes, boolean fridge){
-        if(coffee){brewMaster.turnOn();}
-        else{brewMaster.turnOff();}
+        
+    }
 
-        if(dishes){dishWasher.turnOn();}
-        else{dishWasher.turnOff();}
-
-        if(fridge){iceBox.turnOn();}
-        else{iceBox.turnOff();}
+    public void doKitchenWork(){
+        
     }
 
 }
