@@ -15,7 +15,16 @@ public class App {
          */
         System.out.println("Start Tests");
         SmartKitchen myKitchen = new SmartKitchen();
-        
+        myKitchen.doKitchenWork();
+        System.out.println("--------------next test-------------");
+        myKitchen.loadDishwasher();
+        myKitchen.doKitchenWork();
+        System.out.println("--------------next test-------------");
+        myKitchen.setKitchenState(true, true, true);
+        myKitchen.doKitchenWork();
+        System.out.println("--------------next test-------------");
+        myKitchen.setKitchenState(true, true, false);
+        myKitchen.doKitchenWork();
         System.out.println("----------end tests-----------");
     }
 }

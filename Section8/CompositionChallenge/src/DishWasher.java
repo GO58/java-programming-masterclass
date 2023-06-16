@@ -17,6 +17,7 @@ public class DishWasher{
     public void doDishes(){
         if(hasWorkToDo){
             System.out.println("Doing the dishes");
+            hasWorkToDo = false;
         }
     }
 }

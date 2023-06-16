@@ -54,17 +54,9 @@ public class SmartKitchen {
     }
 
     public void doKitchenWork(){
-        if(brewMaster.isHasWorkToDo()){
-            System.out.println("The coffee maker is starting to brew coffee.");
-        }
-
-        if(dishWasher.isHasWorkToDo()){
-            System.out.println("The dishwasher is startin to wash the dishes.");
-        }
-
-        if(iceBox.isHasWorkToDo()){
-            System.out.println("The refrigerator is pouring milk.");
-        }
+        brewMaster.brewCoffee();
+        dishWasher.doDishes();
+        iceBox.orderFood();
     }
 
 }
