@@ -15,6 +15,7 @@ public class App {
          */
         System.out.println("Start Tests");
         SmartKitchen myKitchen = new SmartKitchen();
+        
         System.out.println("----------end tests-----------");
     }
 }

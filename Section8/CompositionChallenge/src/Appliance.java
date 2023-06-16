@@ -14,11 +14,11 @@ public class Appliance {
         return isWorking;
     }
 
-    protected turnOn(){
+    protected void turnOn(){
         isWorking = true;
     }
 
-    protected turnOff(){
+    protected void turnOff(){
         isWorking = false;
     }
 }
