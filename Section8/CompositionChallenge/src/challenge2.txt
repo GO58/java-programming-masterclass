@@ -25,11 +25,8 @@ getHeight() shall return the value of height and getPaintedColor() should return
 
 
 5) Create a class with the name Bedroom. This class contains eight member variables:
-
-
 name of type String; wall1, wall2, wall3, wall4 of type Wall; ceiling of type Ceiling; bed of type Bed, and lamp of type Lamp. 
 The class constructor should accept all eight of the member variables as parameters, and there should also be two additional methods:
-
 getLamp() which returns an object of type Lamp, and makeBed() which prints a message that the bed is being made and also calls the make() method in the Bed class. 
 
 

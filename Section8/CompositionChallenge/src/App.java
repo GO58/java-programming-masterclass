@@ -26,8 +26,14 @@ public class App {
         System.out.printf("is %d inches high, has %d pillows, %d sheets and %d quilts.%n", myBed.getHeight(), myBed.getPillows(), myBed.getSheets(), myBed.getQuilt());
         Ceiling myCeiling = new Ceiling(10, 256);
         System.out.printf("The ceiling is %d feet high and color number is %d.%n", myCeiling.getHeight(), myCeiling.getPaintedColor());
-        Wall myWall = new Wall("North West");
+        Wall myWall = new Wall("North");
         System.out.println("my wall faces " + myWall.getDirection());
+        Wall wall2 = new Wall("South");
+        Wall wall3 = new Wall("East");
+        Wall wall4 = new Wall("West");
+        Bedroom myBedroom = new Bedroom("Greg's Bedroom", myWall, wall2, wall3, wall4, myCeiling, myBed, myLamp);
+        myBedroom.makeBed();
+        myBedroom.getLamp().turnOn();
         System.out.println("----------end tests-----------");
     }
 }
