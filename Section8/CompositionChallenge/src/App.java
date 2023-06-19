@@ -1,19 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        /*
-         * Smart kitchen
-         * Has: a brewMaster CoffeyMaker
-         * a dishWasher DishWasher
-         * a iceBox Refrigerator
-         * 
-         * It can do:
-         * addWater
-         * pourMilk
-         * loadDishwasher
-         * setKitchenState(bool, bool, bool)
-         * doKitchenWork
-         */
-        System.out.println("Start Tests");
+        
+        System.out.println("Start Tests on SmartKitchen");
         SmartKitchen myKitchen = new SmartKitchen();
         myKitchen.doKitchenWork();
         System.out.println("--------------next test-------------");
@@ -25,6 +13,14 @@ public class App {
         System.out.println("--------------next test-------------");
         myKitchen.setKitchenState(true, true, false);
         myKitchen.doKitchenWork();
+        System.out.println("----------end tests-----------");
+
+        System.out.println("Start Tests on Bedroom");
+        Lamp myLamp = new Lamp("70's yellow stick lamp",false, 60);
+        System.out.println("Lamp type is " + myLamp.getStyle());
+        System.out.println("Lamps has a battery? " + myLamp.isBattery());
+        System.out.println("Lamps glob rating is " + myLamp.getGlobRating());
+        myLamp.turnOn();
         System.out.println("----------end tests-----------");
     }
 }
