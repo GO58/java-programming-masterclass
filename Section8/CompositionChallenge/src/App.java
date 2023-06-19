@@ -21,6 +21,9 @@ public class App {
         System.out.println("Lamps has a battery? " + myLamp.isBattery());
         System.out.println("Lamps glob rating is " + myLamp.getGlobRating());
         myLamp.turnOn();
+        Bed myBed = new Bed("Standard bed", 2, 28, 2, 1);
+        System.out.println("The be is style " + myBed.getStyle());
+        System.out.printf("is %d inches high, has %d pillows, %d sheets and %d quilts.%n", myBed.getHeight(), myBed.getPillows(), myBed.getSheets(), myBed.getQuilt());
         System.out.println("----------end tests-----------");
     }
 }
