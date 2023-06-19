@@ -8,12 +8,12 @@ public class Lamp {
      In addition, four methods should also be created: turnOn() has no return type and should print a message that the lamp is being turned on; 
      getStyle() returns the lamp style; isBattery returns the value of battery; and getGlobRating() returns the globRating of the lamp.
      */
-    private String type;
+    private String style;
     private boolean battery;
     private int globRating;
 
      public Lamp(String type, boolean battery, int globRating){
-        this.type = type;
+        this.style = type;
         this.battery = battery;
         this.globRating = globRating;
      }
@@ -23,7 +23,7 @@ public class Lamp {
      }
 
      public String getStyle(){
-        return type;
+        return style;
      }
 
      public boolean isBattery(){

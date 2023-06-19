@@ -33,5 +33,4 @@ getLamp() which returns an object of type Lamp, and makeBed() which prints a mes
         System.out.println("the bed is being made");
         bed.make();
     }
-
 }
