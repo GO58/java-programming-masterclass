@@ -24,6 +24,10 @@ public class App {
         System.out.println(side1);
         System.out.println(side2);
 
+        Topping toppings[] = new Topping[3];
+
+        System.out.println(toppings[0]);
+
          System.out.println("---------end tests-----------");
     }
 }
