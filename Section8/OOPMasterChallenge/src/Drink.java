@@ -6,8 +6,8 @@ public class Drink {
     
     public Drink(String type, String size) {
         this.type = type;
-        this.size = size;
-        price = setPrice(size.toLowerCase(null));
+        this.size = size.toLowerCase();
+        price = setPrice(this.size);
     }
 
     public Drink() {
@@ -47,5 +47,10 @@ public class Drink {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return size + " " + type + " = " + price;
     }
 }

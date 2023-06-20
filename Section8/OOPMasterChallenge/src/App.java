@@ -14,7 +14,15 @@ public class App {
             including price and extra toppings
         Total price of the meal
          */
+        Drink myDrink = new Drink();
+        Drink otheDrink = new Drink("Root Beer", "Large");
+        System.out.println(myDrink);
+        System.out.println(otheDrink);
 
+        Side side1 = new Side();
+        Side side2 = new Side("Rings");
+        System.out.println(side1);
+        System.out.println(side2);
 
          System.out.println("---------end tests-----------");
     }
