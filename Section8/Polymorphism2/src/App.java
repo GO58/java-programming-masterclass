@@ -6,7 +6,7 @@ public class App {
     System.out.println(car.startEngine());
     System.out.println(car.accelerate());
     System.out.println(car.brake());
-    /*  
+    
     Mitsubishi mitsubishi = new Mitsubishi(6, "Outlander VRX 4WD");
     System.out.println(mitsubishi.startEngine());
     System.out.println(mitsubishi.accelerate());
@@ -21,7 +21,7 @@ public class App {
     System.out.println(holden.startEngine());
     System.out.println(holden.accelerate());
     System.out.println(holden.brake());
-*/
+
     System.out.println("--------------end tests-----------------");
     }
 }

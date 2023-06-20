@@ -21,14 +21,14 @@ public class Car {
     }
 
     public String startEngine(){
-        return (this.getClass().getSimpleName() + "'s engine is starting");
+        return (this.getClass().getSimpleName() + " -> startEngine()");
     }
 
     public String accelerate(){
-        return (this.getClass().getSimpleName() + " is accelerating");
+        return (this.getClass().getSimpleName() + " -> accelerate()");
     }
 
     public String brake(){
-        return (this.getClass().getSimpleName() + " is braking");
+        return (this.getClass().getSimpleName() + " -> brake()");
     }
 }
