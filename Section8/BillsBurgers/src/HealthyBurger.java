@@ -21,30 +21,18 @@ public class HealthyBurger extends Hamburger {
 
     @Override
     public Double itemizeHamburger() {
-        StringBuilder s = new StringBuilder(super.name + " hamburger on a ");
-        s.append(super.breadRollType + " roll with ");
-        s.append(super.meat + ", price is ");
-        s.append(super.price);
-        if(super.addition1Price != 0){
-            s.append("\nAdded " + super.addition1Name + " for an extra " + super.addition1Price);
-        }
-        if(super.addition2Price != 0){
-            s.append("\nAdded " + super.addition2Name + " for an extra " + super.addition2Price);
-        }
-        if(super.addition3Price != 0){
-            s.append("\nAdded " + super.addition3Name + " for an extra " + super.addition3Price);
-        }
-        if(super.addition4Price != 0){
-            s.append("\nAdded " + super.addition4Name + " for an extra " + super.addition4Price);
-        }
+        double total = super.itemizeHamburger();
+        StringBuilder s = new StringBuilder();
         if(healthyExtra1Price != 0){
-            s.append("\nAdded " + healthyExtra1Name + " for an extra " + healthyExtra1Price);
+            s.append("Added " + healthyExtra1Name + " for an extra " + healthyExtra1Price);
+            total += healthyExtra1Price;
         }
         if(healthyExtra2Price != 0){
             s.append("\nAdded " + healthyExtra2Name + " for an extra " + healthyExtra2Price);
+            total += healthyExtra2Price;
         }
         System.out.println(s);
-        return super.price + super.addition1Price + super.addition2Price + super.addition3Price + super.addition4Price + healthyExtra1Price + healthyExtra2Price;
+        return total;
     }
    
 }
