@@ -9,8 +9,12 @@ public class Burger {
      * deluxe burger meal has set price so any additional toppings do not change the price
      * deluxe burger has room for an additional two toppings */
     private String type;
+    
+
     private double price;
     private ArrayList<Topping> toppings;
+    
+
     private int maxToppings;
 
 
@@ -20,10 +24,18 @@ public class Burger {
 
 
     public Burger(String type, double price) {
+        this(type, price, 3);
+    }
+
+    protected Burger(String type, double price, int maxToppings){
         this.type = type;
         this.price = price;
         toppings = new ArrayList<Topping>();
-        maxToppings = 3;
+        this.maxToppings = maxToppings;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public void addTopping(String toppingType){
@@ -82,5 +94,17 @@ public class Burger {
         returnString.append("\n================================\nTotal = ");
         returnString.append(price + toppingPrice());
         return returnString.toString();
+    }
+    
+    protected ArrayList<Topping> getToppings() {
+        return toppings;
+    }
+
+    protected double getPrice(){
+        return price;
+    }
+    
+    public double getTotalPrice(){
+        return price + toppingPrice();
     }
 }

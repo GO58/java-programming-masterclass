@@ -33,6 +33,14 @@ public class App {
         System.out.println(plain);
         System.out.println(goodBurger);
 
+        Burger deluxe = new DeluxeBurger();
+        deluxe.addTopping("cheese");
+        deluxe.addTopping("onions");
+        deluxe.addTopping("mushrooms");
+        deluxe.addTopping("bacon");
+        deluxe.addTopping("avacado");
+        System.out.println(deluxe);
+        
          System.out.println("---------end tests-----------");
     }
 }
