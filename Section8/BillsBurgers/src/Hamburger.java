@@ -40,7 +40,7 @@ public class Hamburger {
         addition4Price = price;
     }
 
-    public Double itemizeHamburger() {
+    public double itemizeHamburger() {
         StringBuilder s = new StringBuilder(name + " hamburger on a ");
         s.append(breadRollType + " roll with ");
         s.append(meat + ", price is ");

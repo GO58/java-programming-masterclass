@@ -20,7 +20,7 @@ public class HealthyBurger extends Hamburger {
     }
 
     @Override
-    public Double itemizeHamburger() {
+    public double itemizeHamburger() {
         double total = super.itemizeHamburger();
         StringBuilder s = new StringBuilder();
         if(healthyExtra1Price != 0){
