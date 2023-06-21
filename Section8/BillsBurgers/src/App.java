@@ -11,11 +11,11 @@ public class App {
     healthyBurger.addHamburgerAddition1("Egg", 5.43);
     healthyBurger.addHealthyAddition1("Lentils", 3.41);
     System.out.println("Total Healthy Burger price is  " + healthyBurger.itemizeHamburger());
-     /* 
+     */
     DeluxeBurger db = new DeluxeBurger();
     db.addHamburgerAddition3("Should not do this", 50.53);
     System.out.println("Total Deluxe Burger price is " + db.itemizeHamburger());
-    */
+    
     System.out.println("\n-------------end tests--------------");
     }
 }

@@ -1,4 +1,3 @@
-
 public class Hamburger {
     private String name;
     private String meat;
@@ -18,41 +17,47 @@ public class Hamburger {
         this.meat = meat;
         this.price = price;
         this.breadRollType = breadRollType;
-        StringBuilder s = new StringBuilder(name + " ");
-        s.append(this.getClass().getSimpleName() + " on a ");
-        s.append(breadRollType + " roll with ");
-        s.append(meat + ", price is ");
-        s.append(price);
-        System.out.println(s);
+        
     }
 
     public void addHamburgerAddition1(String name, double price) {
         addition1Name = name;
         addition1Price = price;
-        System.out.printf("Added %s for an extra %.2f%n", addition1Name, addition1Price);
     }
 
     public void addHamburgerAddition2(String name, double price) {
         addition2Name = name;
         addition2Price = price;
-        System.out.printf("Added %s for an extra %.2f%n", addition2Name, addition2Price);
     }
 
     public void addHamburgerAddition3(String name, double price) {
         addition3Name = name;
         addition3Price = price;
-        System.out.printf("Added %s for an extra %.2f%n", addition3Name, addition3Price);
     }
 
     public void addHamburgerAddition4(String name, double price) {
         addition4Name = name;
         addition4Price = price;
-        System.out.printf("Added %s for an extra %.2f%n", addition4Name, addition4Price);
     }
 
     public Double itemizeHamburger() {
-
+        StringBuilder s = new StringBuilder(name + " hamburger on a ");
+        s.append(breadRollType + " roll with ");
+        s.append(meat + ", price is ");
+        s.append(price);
+        if(addition1Price != 0){
+            s.append("\nAdded " + addition1Name + " for an extra " + addition1Price);
+        }
+        if(addition2Price != 0){
+            s.append("\nAdded " + addition2Name + " for an extra " + addition2Price);
+        }
+        if(addition3Price != 0){
+            s.append("\nAdded " + addition3Name + " for an extra " + addition3Price);
+        }
+        if(addition4Price != 0){
+            s.append("\nAdded " + addition4Name + " for an extra " + addition4Price);
+        }
+        System.out.println(s);
         return price + addition1Price + addition2Price + addition3Price + addition4Price;
     }
-
 }
