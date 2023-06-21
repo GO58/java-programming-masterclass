@@ -1,4 +1,4 @@
-import javax.rmi.ssl.SslRMIClientSocketFactory;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -49,6 +49,6 @@ public class App {
         Side salad = new Side("salad");
         Meal deluxeMeal = new Meal(deluxe, salad, anotheDrink);
         System.out.println(deluxeMeal);
-         System.out.println("---------end tests-----------");
+
     }
 }
