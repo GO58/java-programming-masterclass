@@ -24,9 +24,14 @@ public class App {
         System.out.println(side1);
         System.out.println(side2);
 
-        Topping toppings[] = new Topping[3];
-
-        System.out.println(toppings[0]);
+        Burger plain = new Burger();
+        Burger goodBurger = new Burger("double beef", 8.99);
+        goodBurger.addTopping("cheese");
+        goodBurger.addTopping("bacon");
+        goodBurger.addTopping("egg");
+        goodBurger.addTopping("avacado");
+        System.out.println(plain);
+        System.out.println(goodBurger);
 
          System.out.println("---------end tests-----------");
     }

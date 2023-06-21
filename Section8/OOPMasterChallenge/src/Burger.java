@@ -12,13 +12,10 @@ public class Burger {
     private double price;
     private ArrayList<Topping> toppings;
     private int maxToppings;
-    
-
-    private int toppingCount;
 
 
     public Burger() {
-        this("regular", 5.89);
+        this("regular burger", 5.89);
     }
 
 
@@ -63,6 +60,27 @@ public class Burger {
         }
     }
 
+    private double toppingPrice(){
+        double totalToppingPrice = 0;
+        for (Topping topping : toppings) {
+            totalToppingPrice += topping.getPrice();
+        }
+        return totalToppingPrice;
+    }
 
-    
+    @Override
+    public String toString() {
+        StringBuilder returnString = new StringBuilder(type);
+        returnString.append(" = ");
+        returnString.append(price);
+        for (Topping topping : toppings) {
+            returnString.append("\n\t**add ");
+            returnString.append(topping.getType());
+            returnString.append("** = ");
+            returnString.append(topping.getPrice());
+        }
+        returnString.append("\n================================\nTotal = ");
+        returnString.append(price + toppingPrice());
+        return returnString.toString();
+    }
 }
