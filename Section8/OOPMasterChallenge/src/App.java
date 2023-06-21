@@ -40,7 +40,15 @@ public class App {
         deluxe.addTopping("bacon");
         deluxe.addTopping("avacado");
         System.out.println(deluxe);
-        
+
+        Meal defaultMeal = new Meal();
+        System.out.println(defaultMeal);
+        Meal yummy = new Meal(goodBurger, side2, otheDrink);
+        System.out.println(yummy);
+        Drink anotheDrink = new Drink("Cherry Coke", "large");
+        Side salad = new Side("salad");
+        Meal deluxeMeal = new Meal(deluxe, salad, anotheDrink);
+        System.out.println(deluxeMeal);
          System.out.println("---------end tests-----------");
     }
 }

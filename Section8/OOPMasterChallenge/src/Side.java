@@ -38,6 +38,10 @@ public class Side {
 
     @Override
     public String toString() {
-        return type + " = " + price;
+        return "\n" + type + " = " + price;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }

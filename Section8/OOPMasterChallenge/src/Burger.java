@@ -91,7 +91,7 @@ public class Burger {
             returnString.append("** = ");
             returnString.append(topping.getPrice());
         }
-        returnString.append("\n================================\nTotal = ");
+        returnString.append("\nBurger Total = ");
         returnString.append(price + toppingPrice());
         return returnString.toString();
     }
