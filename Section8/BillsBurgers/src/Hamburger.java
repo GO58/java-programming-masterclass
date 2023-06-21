@@ -1,16 +1,16 @@
 public class Hamburger {
-    private String name;
-    private String meat;
-    private double price;
-    private String breadRollType;
-    private String addition1Name;
-    private double addition1Price = 0.0;
-    private String addition2Name;
-    private double addition2Price = 0.0;
-    private String addition3Name;
-    private double addition3Price = 0.0;
-    private String addition4Name;
-    private double addition4Price = 0.0;
+    protected String name;
+    protected String meat;
+    protected double price;
+    protected String breadRollType;
+    protected String addition1Name;
+    protected double addition1Price = 0.0;
+    protected String addition2Name;
+    protected double addition2Price = 0.0;
+    protected String addition3Name;
+    protected double addition3Price = 0.0;
+    protected String addition4Name;
+    protected double addition4Price = 0.0;
 
     public Hamburger(String name, String meat, double price, String breadRollType) {
         this.name = name;
