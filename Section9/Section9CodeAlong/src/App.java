@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Start Tests");
         arrayChallenge();
-        System.out.println("--------end tests----------");
+        System.out.println("\n--------end tests----------");
     }
 
     private static void arrayChallenge(){
@@ -23,5 +23,17 @@ public class App {
             reversedArray[i] = sortedArray[sortedArray.length - 1 - i];
         }
         System.out.println(Arrays.toString(reversedArray));
+
+        testSortedArray();
+    }
+
+    private static void testSortedArray() {
+        int lengthOfTestArray = 5;
+        System.out.println("Enter " + lengthOfTestArray + " integers:");
+        int[] myArray = SortedArray.getIntegers(lengthOfTestArray);
+        SortedArray.printArray(myArray);
+        int[] reversedArray = SortedArray.sortIntegers(myArray);
+        SortedArray.printArray(reversedArray);
+
     }
 }
