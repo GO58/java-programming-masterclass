@@ -34,6 +34,5 @@ public class App {
         SortedArray.printArray(myArray);
         int[] reversedArray = SortedArray.sortIntegers(myArray);
         SortedArray.printArray(reversedArray);
-
     }
 }

@@ -28,7 +28,7 @@ public class SortedArray {
 
     public static int[] sortIntegers(int[] array2Sort){
         int[] sortedArray = Arrays.copyOf(array2Sort, array2Sort.length);
-        Arrays.sort(array2Sort);
+        Arrays.sort(sortedArray);
         int[] returnArray = new int[sortedArray.length];
         for(int i = 0; i < sortedArray.length; i++){
             returnArray[i] = sortedArray[sortedArray.length - 1 - i];
