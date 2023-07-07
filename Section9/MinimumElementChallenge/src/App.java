@@ -4,11 +4,16 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Start Tests");
-
-        int[] intArray = readIntegers2();
+        /* 
+        int[] intArray = readIntegers();
         System.out.println(Arrays.toString(intArray));
         int smallestInt = findMin(intArray);
         System.out.println(smallestInt);
+        System.out.println("------------end test---------------");
+        */
+        System.out.println("\nTesting Minimum Element");
+
+        MinimumElement.runTests();
 
         System.out.println("------------end tests---------------");
     }
@@ -25,47 +30,6 @@ public class App {
     }
 
     private static int[] readIntegers() {
-        //read comma delimited list of numbers from user using Scanner
-        //return array of ints
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a list of integers seperated by commas:");
-        String enteredNumbers = scanner.nextLine().trim();
-        char[] rawNumbers = enteredNumbers.toCharArray();
-        int numberOfNumbers = 1;
-        for (char c : rawNumbers) {
-            if(c == ','){
-                numberOfNumbers++;
-            }
-        }
-        int[] integers = new int[numberOfNumbers];
-        int numberIndex = 0;
-        String currentNumber = "";
-        for(int i = 0; i < rawNumbers.length; i++){
-            if(rawNumbers[i] != ','){
-                currentNumber = currentNumber + rawNumbers[i];
-            }
-            else{
-                try {
-                    integers[numberIndex] = Integer.parseInt(currentNumber);
-                    numberIndex++;
-                    currentNumber = "";
-                } catch (Exception e) {
-                    System.out.println(e.toString());
-                }
-            }
-        }
-        try {
-            integers[numberIndex] = Integer.parseInt(currentNumber);
-            numberIndex++;
-            currentNumber = "";
-        } catch (Exception e) {
-            System.out.println(e.toString());
-        }
-        
-        scanner.close();
-        return integers;
-    }
-    private static int[] readIntegers2() {
         //read comma delimited list of numbers from user using Scanner
         //return array of ints
         Scanner scanner = new Scanner(System.in);
