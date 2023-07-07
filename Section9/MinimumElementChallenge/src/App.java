@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Start Tests");
 
-        int[] intArray = readIntegers();
+        int[] intArray = readIntegers2();
         System.out.println(Arrays.toString(intArray));
         int smallestInt = findMin(intArray);
         System.out.println(smallestInt);
@@ -28,6 +28,7 @@ public class App {
         //read comma delimited list of numbers from user using Scanner
         //return array of ints
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a list of integers seperated by commas:");
         String enteredNumbers = scanner.nextLine().trim();
         char[] rawNumbers = enteredNumbers.toCharArray();
         int numberOfNumbers = 1;
@@ -63,5 +64,22 @@ public class App {
         
         scanner.close();
         return integers;
+    }
+    private static int[] readIntegers2() {
+        //read comma delimited list of numbers from user using Scanner
+        //return array of ints
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a list of integers seperated by commas:");
+        String enteredNumbers = scanner.nextLine().trim();
+
+        String[] splits = enteredNumbers.split(",");
+        int[] values = new int[splits.length];
+
+        for (int i = 0; i < splits.length; i++){
+            values[i] = Integer.parseInt(splits[i].trim());
+        }
+        
+        scanner.close();
+        return values;
     }
 }
